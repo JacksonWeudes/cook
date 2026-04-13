@@ -1,8 +1,10 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+
 :root{
-    --title-font: ;
-    --text-font: ;
+    --title-font: "Josefin Slab", sans-serif;
+    --text-font: "Inter", sans-serif;
 }
 
 *{
@@ -15,8 +17,23 @@ body{
     min-height: 100dvh;
 }
 
+h1, h2, h3{
+    text-transform: uppercase;
+    font-family: var(--title-font);
+    font-weight: normal;
+}
+
+p, button{
+    font-family: var(--text-font);
+}
+
 button{
     cursor: pointer;
     background-color: transparent;
     border: none;
+    text-transform: capitalize;
+}
+
+img{
+    width: 100%;
 }

@@ -1,10 +1,18 @@
 @import url(base.css);
 
 .header{
+    position: fixed;
+    width: 100%;
+    padding: .5rem 1.5rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid;
+
+    color: #fff;
+}
+.header h1{
+    text-transform: capitalize;
 }
 .header .mobile-icon{
     display: flex;
@@ -18,17 +26,32 @@
 }
 .header .mobile-icon span{
     width: 100%;
-    height: 2px;
-    background-color: #000;
+    height: 1px;
+    background-color: #fff;
 }
 .header .desk-menu{
     display: none;
 }
 .header .actions .action{
+    position: relative;
     width: 30px;
     height: 30px;
-    
-    font-size: 1.3rem;
+    padding: 1rem;
+    margin-inline: .1rem;
+
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #fff;
+
+    border: .5px solid;
+    border-radius: 40px;
+    background-color: #ffffff21;
+}
+.header .actions .action i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .header .side-menu{
     position: fixed;
@@ -39,4 +62,42 @@
     height: 100dvh;
 
     border: 1px solid;
+}
+
+.main .hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100dvh;
+    padding-inline: 1.5rem;
+
+    background-image: url(../imgs/b2.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+}
+.main .hero .call-to-action{
+    margin-bottom: 2rem;
+}
+.main .hero .call-to-action h2{
+    width: 300px;
+    font-size: clamp(2.5rem, 3vw, 6rem);
+    color: #fff;
+}
+.main .hero .call-to-action p{
+    width: 300px;
+    margin-block: 1.2rem;
+
+    font-size: clamp(1rem, 1vw, 1.1rem);
+    color: #E5E7EB;
+}
+.main .hero .call-to-action button{
+    padding: 10px 20px;
+
+    border-radius: 40px;
+    background-color: #fff;
+    font-size: clamp(1.2rem, 1vw, 1.5rem);
+}
+.main .hero .offer{
+    display: none;
 }
